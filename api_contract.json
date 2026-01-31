@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0",
+  "description": "Garanti BBVA Finansal Pusula - API Entegrasyon Sözleşmesi",
+  "request_format": {
+    "endpoint": "POST /analyze",
+    "payload": {
+      "user_metadata": {
+        "current_balance": "float (Kullanıcının hesaptaki toplam parası)"
+      },
+      "transactions": [
+        {
+          "id": "string",
+          "date": "YYYY-MM-DD",
+          "amount": "float",
+          "description": "string",
+          "mcc_code": "string (4 haneli sektör kodu)",
+          "category": "Enum [FIXED, SUBSCRIPTION, UTILITY, LIFESTYLE, OTHER]"
+        }
+      ]
+    }
+  },
+  "response_format": {
+    "safe_to_spend": {
+      "amount": "float",
+      "explanation": "string (AI tarafından oluşturulan kısa açıklama)"
+    },
+    "alerts": [
+      {
+        "type": "Enum [SUBSCRIPTION_DUPLICATE, PRICE_HIKE, BUDGET_WARNING]",
+        "severity": "Enum [LOW, MEDIUM, HIGH]",
+        "message": "string",
+        "potential_savings": "float (Opsiyonel)"
+      }
+    ],
+    "upcoming_obligations": [
+      {
+        "name": "string",
+        "estimated_date": "YYYY-MM-DD",
+        "estimated_amount": "float"
+      }
+    ]
+  }
+}
