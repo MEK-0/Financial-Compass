@@ -1,0 +1,15 @@
+# Java / Maven
+target/
+*.class
+*.jar
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# IDEs
+.idea/
+.vscode/
+*.swp
