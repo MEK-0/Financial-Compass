@@ -1,0 +1,66 @@
+{
+  "user_metadata": {
+    "current_balance": 35000.0,
+    "credit_card_debt": 7500.0,
+    "salary": 45000.0,
+    "salary_day": 1
+  },
+  "transactions": [
+    {
+      "id": "tx001",
+      "date": "2025-12-15",
+      "amount": 12000.0,
+      "description": "Kira Odeme",
+      "mcc_code": "6513",
+      "category": "FIXED"
+    },
+    {
+      "id": "tx002",
+      "date": "2026-01-15",
+      "amount": 12000.0,
+      "description": "Kira Odeme",
+      "mcc_code": "6513",
+      "category": "FIXED"
+    },
+    {
+      "id": "tx003",
+      "date": "2026-01-10",
+      "amount": 149.90,
+      "description": "Netflix.com",
+      "mcc_code": "4899",
+      "category": "SUBSCRIPTION"
+    },
+    {
+      "id": "tx004",
+      "date": "2026-01-12",
+      "amount": 135.00,
+      "description": "Disney Plus",
+      "mcc_code": "4899",
+      "category": "SUBSCRIPTION"
+    },
+    {
+      "id": "tx005",
+      "date": "2025-12-05",
+      "amount": 60.0,
+      "description": "Spotify Premium",
+      "mcc_code": "4899",
+      "category": "SUBSCRIPTION"
+    },
+    {
+      "id": "tx006",
+      "date": "2026-01-05",
+      "amount": 95.0,
+      "description": "Spotify Premium",
+      "mcc_code": "4899",
+      "category": "SUBSCRIPTION"
+    },
+    {
+      "id": "tx007",
+      "date": "2026-01-20",
+      "amount": 450.0,
+      "description": "TurkNet Internet",
+      "mcc_code": "4900",
+      "category": "UTILITY"
+    }
+  ]
+}
