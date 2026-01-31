@@ -1,11 +1,15 @@
 {
-  "version": "1.0.0",
-  "description": "Garanti BBVA Finansal Pusula - API Entegrasyon Sözleşmesi",
+  "version": "1.1.0",
+  "description": "Garanti BBVA Finansal Pusula - FINAL API",
   "request_format": {
     "endpoint": "POST /analyze",
     "payload": {
       "user_metadata": {
-        "current_balance": "float (Kullanıcının hesaptaki toplam parası)"
+        "current_balance": "float (Kullanıcının hesaptaki toplam parası)",
+        
+        "credit_card_debt": "float (Toplam Kredi Kartı Borcu)",
+        "salary": "float (Maaş Tutarı)",
+        "salary_day": "int (Ayın kaçında maaş yatıyor? Örn: 1 veya 15)"
       },
       "transactions": [
         {
@@ -13,7 +17,7 @@
           "date": "YYYY-MM-DD",
           "amount": "float",
           "description": "string",
-          "mcc_code": "string (4 haneli sektör kodu)",
+          "mcc_code": "string",
           "category": "Enum [FIXED, SUBSCRIPTION, UTILITY, LIFESTYLE, OTHER]"
         }
       ]
@@ -22,14 +26,14 @@
   "response_format": {
     "safe_to_spend": {
       "amount": "float",
-      "explanation": "string (AI tarafından oluşturulan kısa açıklama)"
+      "explanation": "string (Örn: '20.000 TL bakiyen var ama 5.000 TL borç düşünce kalan: 15.000')"
     },
     "alerts": [
       {
         "type": "Enum [SUBSCRIPTION_DUPLICATE, PRICE_HIKE, BUDGET_WARNING]",
         "severity": "Enum [LOW, MEDIUM, HIGH]",
         "message": "string",
-        "potential_savings": "float (Opsiyonel)"
+        "potential_savings": "float"
       }
     ],
     "upcoming_obligations": [
