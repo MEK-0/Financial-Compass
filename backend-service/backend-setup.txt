@@ -1,0 +1,27 @@
+PROJE: Financial Compass Backend (Java)
+-------------------------------------------------
+
+GEREKLİ ORTAM (PREREQUISITES):
+1. Java Development Kit (JDK): Sürüm 17 (Java 17)
+2. Build Tool: Maven (IntelliJ içinde gömülü gelir, ekstra kuruluma gerek yok)
+
+KULLANILAN KÜTÜPHANELER (DEPENDENCIES):
+Not: Bu kütüphanelerin hepsi 'pom.xml' dosyasında tanımlıdır. Proje açılınca Maven otomatik indirir.
+
+1. Spring Boot Starter Web (3.x)
+   - API endpointlerini açmak için.
+
+2. Spring Cloud Starter OpenFeign
+   - Python AI servisine HTTP isteği atmak için.
+
+3. Apache POI (poi-ooxml)
+   - Excel (.xlsx) dosyalarını okumak ve işlemek için.
+
+4. Lombok
+   - Getter/Setter kodlarını kısaltmak için.
+
+KURULUM VE ÇALIŞTIRMA:
+1. Projeyi IntelliJ IDEA ile aç.
+2. Sağ altta çıkan "Load Maven Project" uyarısına tıkla (veya sağdaki Maven sekmesinden "Reload" yap).
+3. Kütüphanelerin inmesi bitince 'PusulaApplication.java' dosyasına sağ tıklayıp 'Run' de.
+4. Uygulama http://localhost:8080 adresinde çalışacaktır.
